@@ -7,9 +7,10 @@
 
 ## Instructions
 
-To get started, open `designs.js` and start building out the app's functionality.
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Set the size of the table as an N by M grid.
+Click the submit button to display the said grid.
+Choose a color.
+Click a cell in the grid to fill that cell with the chosen color.
 
 ## Contributing
 
