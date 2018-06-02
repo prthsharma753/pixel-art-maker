@@ -1,8 +1,12 @@
+//Access height, width and color of grid
 const colorSelected = document.querySelector("#colorPicker");
+const Height = document.getElementById('input_height');
+const Width = document.getElementById('input_width');
 
+// grid generation based on user input
 function makeGrid() {
-    let inputHeight = document.getElementById('input_height').value;
-    let inputWidth = document.getElementById('input_width').value;
+    let inputHeight = Height.value;
+    let inputWidth = Width.value;
     let table = document.getElementById('pixel_canvas');
 
     table.innerHTML = '';
@@ -16,12 +20,12 @@ function makeGrid() {
             tableData.appendChild(document.createTextNode(''));
             tableRow.appendChild(tableData);
         }
-        tableRow.addEventListener('click', clickCell);
+        tableData.addEventListener('click', clickCell);
         tableBody.appendChild(tableRow);
     }
     table.appendChild(tableBody); 
 }
-
+//An event listener that comes into action when a cell is clicked.
 function clickCell(event) {
   const color = colorSelected.value;
   event.target.style.backgroundColor = color;
