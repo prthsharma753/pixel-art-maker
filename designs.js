@@ -19,8 +19,8 @@ function makeGrid() {
             let tableData = document.createElement('td');
             tableData.appendChild(document.createTextNode(''));
             tableRow.appendChild(tableData);
+            tableData.addEventListener('click', clickCell);
         }
-        tableData.addEventListener('click', clickCell);
         tableBody.appendChild(tableRow);
     }
     table.appendChild(tableBody); 
